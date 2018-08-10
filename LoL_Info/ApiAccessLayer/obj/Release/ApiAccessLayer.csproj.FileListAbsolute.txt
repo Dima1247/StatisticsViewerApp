@@ -1,0 +1,6 @@
+D:\LoL_Info\ApiAccessLayer\bin\Release\ApiAccessLayer.dll
+D:\LoL_Info\ApiAccessLayer\bin\Release\ApiAccessLayer.pdb
+D:\LoL_Info\ApiAccessLayer\bin\Release\Newtonsoft.Json.dll
+D:\LoL_Info\ApiAccessLayer\bin\Release\Newtonsoft.Json.xml
+D:\LoL_Info\ApiAccessLayer\obj\Release\ApiAccessLayer.dll
+D:\LoL_Info\ApiAccessLayer\obj\Release\ApiAccessLayer.pdb
