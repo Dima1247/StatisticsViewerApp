@@ -1,0 +1,7 @@
+D:\LoL_Info\DataAccessLayer\bin\Release\DataAccessLayer.dll
+D:\LoL_Info\DataAccessLayer\bin\Release\DataAccessLayer.pdb
+D:\LoL_Info\DataAccessLayer\bin\Release\DataBaseElements.dll
+D:\LoL_Info\DataAccessLayer\bin\Release\DataBaseElements.pdb
+D:\LoL_Info\DataAccessLayer\obj\Release\DataAccessLayer.csprojResolveAssemblyReference.cache
+D:\LoL_Info\DataAccessLayer\obj\Release\DataAccessLayer.dll
+D:\LoL_Info\DataAccessLayer\obj\Release\DataAccessLayer.pdb
