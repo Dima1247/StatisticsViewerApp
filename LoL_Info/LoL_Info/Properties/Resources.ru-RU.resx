@@ -1,0 +1,502 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="Logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Logo2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Logo2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LogIn" xml:space="preserve">
+    <value>Войти</value>
+  </data>
+  <data name="Picture1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\picture1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Picture10" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\picture10.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Picture11" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\picture11.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Picture12" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\picture12.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Picture2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\picture2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Picture3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\picture3.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Picture4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\picture4.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Picture5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\picture5.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Picture6" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\picture6.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Picture7" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\picture7.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Picture8" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\picture8.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Picture9" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\picture9.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="AllGames" xml:space="preserve">
+    <value>Все игры</value>
+  </data>
+  <data name="AllMatches" xml:space="preserve">
+    <value>Все матчи</value>
+  </data>
+  <data name="AverageFarm" xml:space="preserve">
+    <value>Средний фарм: </value>
+  </data>
+  <data name="AverageKDA" xml:space="preserve">
+    <value>Средний КДА: </value>
+  </data>
+  <data name="AverageVal" xml:space="preserve">
+    <value>Среднее значение</value>
+  </data>
+  <data name="BtnAccept" xml:space="preserve">
+    <value>Далее</value>
+  </data>
+  <data name="BtnAcceptTip" xml:space="preserve">
+    <value>Показать командную информацию</value>
+  </data>
+  <data name="ChartFarm" xml:space="preserve">
+    <value>График Фарму</value>
+  </data>
+  <data name="ChartFarmTip" xml:space="preserve">
+    <value>Показать график фарму</value>
+  </data>
+  <data name="ChartKDA" xml:space="preserve">
+    <value>График КДА</value>
+  </data>
+  <data name="ChartKDATip" xml:space="preserve">
+    <value>Показать график КДА</value>
+  </data>
+  <data name="Charts" xml:space="preserve">
+    <value>Графики</value>
+  </data>
+  <data name="ChartsTip" xml:space="preserve">
+    <value>Показать статистику с помошью графиков</value>
+  </data>
+  <data name="ChartTip" xml:space="preserve">
+    <value>Нажмите праую кнопку мыши</value>
+  </data>
+  <data name="Downloading" xml:space="preserve">
+    <value>Скачивание данных</value>
+  </data>
+  <data name="DownloadingMessage" xml:space="preserve">
+    <value>Загрузка началась!</value>
+  </data>
+  <data name="DownloadingTip" xml:space="preserve">
+    <value>Скачать дополнительную информацию про игрока</value>
+  </data>
+  <data name="FarmPerMatch" xml:space="preserve">
+    <value>миньонов за матч</value>
+  </data>
+  <data name="FarmPerMinute" xml:space="preserve">
+    <value>миньонов в минуту</value>
+  </data>
+  <data name="Friday" xml:space="preserve">
+    <value>Пятница</value>
+  </data>
+  <data name="Influence" xml:space="preserve">
+    <value>Влияние на результат: </value>
+  </data>
+  <data name="InfluenceTip" xml:space="preserve">
+    <value>Процент матчей, выигранных за счет собственных сил (КДА &gt;= </value>
+  </data>
+  <data name="Item1" xml:space="preserve">
+    <value>Мод 1</value>
+  </data>
+  <data name="Item2" xml:space="preserve">
+    <value>Мод 2</value>
+  </data>
+  <data name="Item3" xml:space="preserve">
+    <value>Мод 3</value>
+  </data>
+  <data name="Item4" xml:space="preserve">
+    <value>Мод 4</value>
+  </data>
+  <data name="Item5" xml:space="preserve">
+    <value>Мод 5</value>
+  </data>
+  <data name="Item6" xml:space="preserve">
+    <value>Мод 6</value>
+  </data>
+  <data name="KDA" xml:space="preserve">
+    <value>убийств и поддержек к смертям</value>
+  </data>
+  <data name="LoadBtnTip" xml:space="preserve">
+    <value>Загрузить персональную информацию</value>
+  </data>
+  <data name="LoadedMessage" xml:space="preserve">
+    <value>Данные игрока были успешно загружены!</value>
+  </data>
+  <data name="LogOut" xml:space="preserve">
+    <value>Выйти</value>
+  </data>
+  <data name="Loser" xml:space="preserve">
+    <value>Проигравший</value>
+  </data>
+  <data name="Match" xml:space="preserve">
+    <value>Матч</value>
+  </data>
+  <data name="Matches" xml:space="preserve">
+    <value>Матчи</value>
+  </data>
+  <data name="MatchesFailedMessage" xml:space="preserve">
+    <value>У вас недостаточное количество матчей!</value>
+  </data>
+  <data name="MenuBtnTip" xml:space="preserve">
+    <value>Показать меню</value>
+  </data>
+  <data name="MenuFailedMessage" xml:space="preserve">
+    <value>Вы должны войти!</value>
+  </data>
+  <data name="Minions" xml:space="preserve">
+    <value>миньонов</value>
+  </data>
+  <data name="Monday" xml:space="preserve">
+    <value>Понедельник</value>
+  </data>
+  <data name="NameFailedMessage" xml:space="preserve">
+    <value>Введите ваше имя игрока и нажмите 'Войти'</value>
+  </data>
+  <data name="Player" xml:space="preserve">
+    <value>Игрок</value>
+  </data>
+  <data name="ProcessDontOverMessage" xml:space="preserve">
+    <value>Процесс еще не закончился!</value>
+  </data>
+  <data name="RankedMatches" xml:space="preserve">
+    <value>Ранговые матчи</value>
+  </data>
+  <data name="RequiredMatches" xml:space="preserve">
+    <value>У вас нет нужных матчей!</value>
+  </data>
+  <data name="Saturday" xml:space="preserve">
+    <value>Суббота</value>
+  </data>
+  <data name="SelectedPlayersFailedMessage" xml:space="preserve">
+    <value>Проверьте выбранных игроков!</value>
+  </data>
+  <data name="SimpleMatches" xml:space="preserve">
+    <value>Обычные матчи</value>
+  </data>
+  <data name="Statistics" xml:space="preserve">
+    <value>Статистика</value>
+  </data>
+  <data name="StatisticsTip" xml:space="preserve">
+    <value>Показать информацию про игрока или команду</value>
+  </data>
+  <data name="SummonerLogTip" xml:space="preserve">
+    <value>Ваше имя игрока</value>
+  </data>
+  <data name="Sunday" xml:space="preserve">
+    <value>Воскресенье</value>
+  </data>
+  <data name="TbDate" xml:space="preserve">
+    <value>Дата</value>
+  </data>
+  <data name="TbFarm" xml:space="preserve">
+    <value>Фарм (миньонов за матч)</value>
+  </data>
+  <data name="TbHero" xml:space="preserve">
+    <value>Герой</value>
+  </data>
+  <data name="TbKDA" xml:space="preserve">
+    <value>КДА (убийств и поддержек к смертям)</value>
+  </data>
+  <data name="TbLevel" xml:space="preserve">
+    <value>Лвл</value>
+  </data>
+  <data name="TbPosition" xml:space="preserve">
+    <value>Позиция</value>
+  </data>
+  <data name="TbSummoner" xml:space="preserve">
+    <value>Игрок</value>
+  </data>
+  <data name="Team" xml:space="preserve">
+    <value>Команда</value>
+  </data>
+  <data name="TeamModeTitle" xml:space="preserve">
+    <value>Командный мод</value>
+  </data>
+  <data name="TeamTip" xml:space="preserve">
+    <value>Выбрать участников команды и показать командную информацию</value>
+  </data>
+  <data name="Thursday" xml:space="preserve">
+    <value>Четверг</value>
+  </data>
+  <data name="TopDay" xml:space="preserve">
+    <value>Самый лучший день: </value>
+  </data>
+  <data name="TrendLine" xml:space="preserve">
+    <value>Тренд линия</value>
+  </data>
+  <data name="Tuesday" xml:space="preserve">
+    <value>Вторник</value>
+  </data>
+  <data name="Wednesday" xml:space="preserve">
+    <value>Среда</value>
+  </data>
+  <data name="Winner" xml:space="preserve">
+    <value>Победитель</value>
+  </data>
+  <data name="WinRate" xml:space="preserve">
+    <value>Рейтинг побед: </value>
+  </data>
+  <data name="BrRegion" xml:space="preserve">
+    <value>Бразилия</value>
+  </data>
+  <data name="Eng" xml:space="preserve">
+    <value>Английский</value>
+  </data>
+  <data name="EuneRegion" xml:space="preserve">
+    <value>Северная и Восточная Европа</value>
+  </data>
+  <data name="EuwRegion" xml:space="preserve">
+    <value>Западная Европа</value>
+  </data>
+  <data name="JpRegion" xml:space="preserve">
+    <value>Япония</value>
+  </data>
+  <data name="KrRegion" xml:space="preserve">
+    <value>Корея</value>
+  </data>
+  <data name="LanguageField" xml:space="preserve">
+    <value>Язык:</value>
+  </data>
+  <data name="LanRegion" xml:space="preserve">
+    <value>Северная Латинская Америка</value>
+  </data>
+  <data name="LasRegion" xml:space="preserve">
+    <value>Южная Латинская Америка</value>
+  </data>
+  <data name="NaRegion" xml:space="preserve">
+    <value>Северная Америка</value>
+  </data>
+  <data name="OceRegion" xml:space="preserve">
+    <value>Океания</value>
+  </data>
+  <data name="RegionField" xml:space="preserve">
+    <value>Регион:</value>
+  </data>
+  <data name="RuRegion" xml:space="preserve">
+    <value>Россия</value>
+  </data>
+  <data name="Rus" xml:space="preserve">
+    <value>Русский</value>
+  </data>
+  <data name="SettingsField" xml:space="preserve">
+    <value>Настройки</value>
+  </data>
+  <data name="TrRegion" xml:space="preserve">
+    <value>Турция</value>
+  </data>
+  <data name="Ukr" xml:space="preserve">
+    <value>Украинский</value>
+  </data>
+  <data name="BtnAcceptSettingsTip" xml:space="preserve">
+    <value>Принять изменения</value>
+  </data>
+  <data name="LogProblemMessage" xml:space="preserve">
+    <value>Проблема на сервере. Попробуйте войти позже.</value>
+  </data>
+  <data name="ApiKeyField" xml:space="preserve">
+    <value>API ключ:</value>
+  </data>
+  <data name="MatchesCount" xml:space="preserve">
+    <value>Количество матчей:</value>
+  </data>
+  <data name="Wins" xml:space="preserve">
+    <value>Победы</value>
+  </data>
+  <data name="RlAssassin" xml:space="preserve">
+    <value>Убийца</value>
+  </data>
+  <data name="RlFighter" xml:space="preserve">
+    <value>Боец</value>
+  </data>
+  <data name="RlMage" xml:space="preserve">
+    <value>Маг</value>
+  </data>
+  <data name="RlMarksman" xml:space="preserve">
+    <value>Стрелок</value>
+  </data>
+  <data name="RlSupport" xml:space="preserve">
+    <value>Подмога</value>
+  </data>
+  <data name="RlTank" xml:space="preserve">
+    <value>Танк</value>
+  </data>
+  <data name="TopRole" xml:space="preserve">
+    <value>Самая лучшая роль: </value>
+  </data>
+  <data name="CurrentKDA" xml:space="preserve">
+    <value>КДА: </value>
+  </data>
+  <data name="InfluenceRightButtonClickTip" xml:space="preserve">
+    <value>Нажмите праую кнопку мыши, чтобы изменить нынешний КДА </value>
+  </data>
+  <data name="BtnNo" xml:space="preserve">
+    <value>Нет</value>
+  </data>
+  <data name="BtnYes" xml:space="preserve">
+    <value>Да</value>
+  </data>
+  <data name="TextFarm" xml:space="preserve">
+    <value>Фарм</value>
+  </data>
+  <data name="TextKDA" xml:space="preserve">
+    <value>КДА</value>
+  </data>
+  <data name="TryLoadNewDataMessage" xml:space="preserve">
+    <value>Желаете обновить список матчей?</value>
+  </data>
+  <data name="SbCharts" xml:space="preserve">
+    <value>Графики загружены</value>
+  </data>
+  <data name="SbDownload" xml:space="preserve">
+    <value>Матчи загружаются.  Пожалуйста, подождите...</value>
+  </data>
+  <data name="SbMenu" xml:space="preserve">
+    <value>Меню открыто</value>
+  </data>
+  <data name="SbPlayerToTeam" xml:space="preserve">
+    <value>Данные группы загружены</value>
+  </data>
+  <data name="SbReady" xml:space="preserve">
+    <value>Программа готова к работе</value>
+  </data>
+  <data name="SbStats" xml:space="preserve">
+    <value>Статистика загружена</value>
+  </data>
+  <data name="SbTeamToPlayer" xml:space="preserve">
+    <value>Данные игрока загружены</value>
+  </data>
+</root>

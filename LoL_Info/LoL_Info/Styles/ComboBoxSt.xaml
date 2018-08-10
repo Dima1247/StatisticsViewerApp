@@ -1,0 +1,81 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:LoL_Info.Styles">
+   
+    <ControlTemplate TargetType="ToggleButton" x:Key="ComboBoxToggleButtonTemplate">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="20" />
+            </Grid.ColumnDefinitions>
+
+            <Border Name="Border" Grid.ColumnSpan="2" Background="{StaticResource BackColor1}" BorderThickness="2" CornerRadius="5,5,0,0" BorderBrush="{StaticResource ForeColor}">
+                <ContentPresenter></ContentPresenter>
+            </Border>
+
+            <Border Name="ButtonBorder" Grid.Column="1" Margin="3" Background="{StaticResource BackColor2}" BorderThickness="0" CornerRadius="0,5,0,0"/>
+
+            <Path Name="Arrow" Data="M0,0 L0,2 L4,6 L8,2 L8,0 L4,4 z" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center" Fill="{StaticResource ForeColor}"/>
+        </Grid>
+
+        <ControlTemplate.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="Background" TargetName="ButtonBorder" Value="{StaticResource ForeColor}"/>
+                <Setter Property="Fill" TargetName="Arrow" Value="{StaticResource BackColor2}"/>
+            </Trigger>
+
+            <Trigger Property="IsChecked" Value="True">
+                <Setter Property="Background" TargetName="ButtonBorder" Value="{StaticResource ForeColor}"/>
+                <Setter Property="Fill" TargetName="Arrow" Value="{StaticResource BackColor2}"/>
+            </Trigger>
+        </ControlTemplate.Triggers>
+    </ControlTemplate>
+
+    <Style TargetType="ComboBox">
+        <Setter Property="Foreground" Value="{StaticResource ForeColor}"/>
+
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="ComboBox">
+                    <Grid>
+                        <ToggleButton Name="ToggleButton" ClickMode="Press" Focusable="False" Template="{StaticResource ComboBoxToggleButtonTemplate}"
+                                          IsChecked="{Binding Path=IsDropDownOpen, RelativeSource={RelativeSource TemplatedParent}, Mode=TwoWay}"/>
+
+                        <ContentPresenter Name="ContentSite" Content="{TemplateBinding Text}" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="5,3,23,3" IsHitTestVisible="False"></ContentPresenter>
+
+                        <Popup Name="Popup" Placement="Bottom" Focusable="False" AllowsTransparency="True" IsOpen="{TemplateBinding ComboBox.IsDropDownOpen}" PopupAnimation="Slide">
+
+                            <Grid Name="DropDown" MaxHeight="{TemplateBinding ComboBox.MaxDropDownHeight}" MinWidth="{TemplateBinding FrameworkElement.ActualWidth}" SnapsToDevicePixels="True">
+
+                                <Border Name="DropDownBorder" Margin="0,1,0,0" Background="{StaticResource BackColor2}" BorderThickness="2" BorderBrush="{StaticResource ForeColor}"/>
+
+                                <ScrollViewer Margin="4" SnapsToDevicePixels="True">
+                                    <ItemsPresenter KeyboardNavigation.DirectionalNavigation="Contained" />
+                                </ScrollViewer>
+                            </Grid>
+                        </Popup>
+                    </Grid>
+
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="HasItems" Value="False">
+                            <Setter Property="MinHeight" TargetName="DropDownBorder" Value="95"/>
+                        </Trigger>
+
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter Property="Foreground" Value="{StaticResource ForeColor}"/>
+                        </Trigger>
+
+                        <Trigger Property="IsGrouping" Value="True">
+                            <Setter Property="ScrollViewer.CanContentScroll" Value="False"/>
+                        </Trigger>
+
+                        <Trigger Property="IsEditable" Value="True">
+                            <Setter Property="IsTabStop" Value="False"/>
+                            <Setter Property="Visibility" TargetName="ContentSite" Value="Hidden"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+</ResourceDictionary>

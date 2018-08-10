@@ -1,0 +1,121 @@
+﻿<UserControl x:Class="LoL_Info.Windows.MainPlayerInfo"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:p="clr-namespace:LoL_Info.Properties"
+             xmlns:local="clr-namespace:LoL_Info.Windows"
+             mc:Ignorable="d" 
+             d:DesignHeight="400" d:DesignWidth="500" Background="Transparent" FontFamily="Times New Roman" FontSize="20" Loaded="UserControl_Loaded">
+
+    <Grid Background="{StaticResource BackColor}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="206"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <Label Name="fieldWins" Style="{StaticResource TippedLb}" Content="{x:Static p:Resources.WinRate}" VerticalAlignment="Top" HorizontalAlignment="Left" Height="34" Width="Auto">
+            <Label.ToolTip>
+                <ToolTip Name="winsTip" Style="{StaticResource TT1}"></ToolTip>
+            </Label.ToolTip>
+        </Label>
+
+        <Label Name="fieldKDA" Style="{StaticResource TippedLb}" Content="{x:Static p:Resources.AverageKDA}" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,34,0,0" Height="34" Width="Auto">
+            <Label.ToolTip>
+                <ToolTip Name="kdaTip" Style="{StaticResource TT1}"></ToolTip>
+            </Label.ToolTip>
+        </Label>
+
+        <Label Name="fieldFarm" Style="{StaticResource TippedLb}" Content="{x:Static p:Resources.AverageFarm}" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,68,0,0" Height="34" Width="Auto">
+            <Label.ToolTip>
+                <ToolTip Name="farmTip" Style="{StaticResource TT1}"></ToolTip>
+            </Label.ToolTip>
+        </Label>
+
+        <Label Name="fieldTopDay" Style="{StaticResource TippedLb}" Content="{x:Static p:Resources.TopDay}" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,102,0,0" Height="34" Width="Auto">
+            <Label.ToolTip>
+                <ToolTip Name="daysTip" Style="{StaticResource TT1}"></ToolTip>
+            </Label.ToolTip>
+        </Label>
+
+        <Label Name="fieldTopRole" Style="{StaticResource TippedLb}" Content="{x:Static p:Resources.TopRole}" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,136,0,0" Height="34" Width="Auto">
+            <Label.ToolTip>
+                <ToolTip Name="rolesTip" Style="{StaticResource TT1}"></ToolTip>
+            </Label.ToolTip>
+        </Label>
+
+        <StackPanel VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,170,0,0" Height="34" Width="Auto" Orientation="Horizontal">
+            <Label Name="fieldInfluence" Style="{StaticResource TippedLb}" Content="{x:Static p:Resources.Influence}" MouseDown="fieldInfluence_MouseDown">
+                <Label.ToolTip>
+                    <ToolTip Name="influenceTip" Style="{StaticResource TT1}" Content="{x:Static p:Resources.InfluenceRightButtonClickTip}"></ToolTip>
+                </Label.ToolTip>
+            </Label>
+
+            <StackPanel Name="influencePanel" VerticalAlignment="Top" Height="34" Width="Auto" Visibility="Hidden" Orientation="Horizontal">
+                <Border Margin="0,0,5,0" Height="30" Width="80" Background="{StaticResource BackColor}" BorderThickness="2" CornerRadius="5" BorderBrush="{StaticResource ForeColor}">
+                    <TextBox Name="fieldCurrentKDA"  VerticalContentAlignment="Center" HorizontalContentAlignment="Center" BorderThickness="0" Background="{x:Null}" 
+                             Foreground="{StaticResource ForeColor}" FontFamily="Times New Roman" FontSize="22" SelectionBrush="{StaticResource OverControl}" CaretBrush="{StaticResource ForeColor}">
+                        <TextBox.ToolTip>
+                            <ToolTip Name="nameTip" Style="{StaticResource TT1}" Content="{x:Static p:Resources.SummonerLogTip}"></ToolTip>
+                        </TextBox.ToolTip>
+                    </TextBox>
+                </Border>
+
+                <Button Name="btnAcceptCurrentKDA" Style="{StaticResource B1}" Height="20" Width="20" Click="btnAcceptCurrentKDA_Click">
+                    <Path Data="M1 5 L4 9 L9 1" Stroke="{StaticResource ForeColor}"></Path>
+                </Button>
+            </StackPanel>
+        </StackPanel>
+
+        <DataGrid Name="table" Grid.Row="1" Margin="1,2,0,0" MinHeight="150" MinWidth="400" Background="{StaticResource BackColor}" Foreground="{StaticResource BackColor}" 
+                  BorderThickness="0" EnableRowVirtualization="False" VerticalScrollBarVisibility="Visible" HorizontalScrollBarVisibility="Hidden" IsSynchronizedWithCurrentItem="True" 
+                  HeadersVisibility="Column" SelectionChanged="table_SelectionChanged" BeginningEdit="table_BeginningEdit">
+            <DataGrid.ContextMenu>
+                <ContextMenu Name="tableMenu" Background="{StaticResource ForeColor}">
+                    <MenuItem Name="partAll" Style="{StaticResource MI1}" Header="{x:Static p:Resources.AllMatches}" Click="partAll_Click"></MenuItem>
+                    <MenuItem Name="partRanked" Style="{StaticResource MI1}" Header="{x:Static p:Resources.RankedMatches}" Click="partRanked_Click"></MenuItem>
+                    <MenuItem Name="partSimple" Style="{StaticResource MI1}" Header="{x:Static p:Resources.SimpleMatches}" Click="partSimple_Click"></MenuItem>
+                </ContextMenu>
+            </DataGrid.ContextMenu>
+
+            <DataGrid.ToolTip>
+                <ToolTip Style="{StaticResource TT1}" Content="{x:Static p:Resources.ChartTip}"></ToolTip>
+            </DataGrid.ToolTip>
+
+            <DataGrid.Resources>
+                <Style TargetType="{x:Type DataGridColumnHeader}">
+                    <Setter Property="Background" Value="{StaticResource BackColor2}"></Setter>
+                    <Setter Property="Foreground" Value="{StaticResource ForeColor}"></Setter>
+                    <Setter Property="BorderBrush" Value="{StaticResource ForeColor}"></Setter>
+                    <Setter Property="BorderThickness" Value="2"></Setter>
+                </Style>
+                
+                <Style TargetType="{x:Type DataGridCell}">
+                    <Setter Property="Height" Value="60"></Setter>
+                    <Setter Property="Background" Value="Black"></Setter>
+                    <Setter Property="BorderBrush" Value="{StaticResource ForeColor}"></Setter>
+                    <Setter Property="Foreground" Value="{StaticResource ForeColor}"></Setter>
+                    <Setter Property="BorderThickness" Value="1"></Setter>
+                </Style>
+            </DataGrid.Resources>
+
+            <DataGrid.Columns>
+                <DataGridTemplateColumn Header="{x:Static p:Resources.TbHero}" Width="60" CanUserSort="False" CanUserResize="False">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Image Source="{Binding Path}"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                
+                <DataGridTextColumn Header="{x:Static p:Resources.TbPosition}" Binding="{Binding Position}" Width="135" CanUserSort="True"/>
+                
+                <DataGridTextColumn Header="{x:Static p:Resources.TbKDA}" Binding="{Binding KDA}" Width="65" CanUserSort="True"/>
+                
+                <DataGridTextColumn Header="{x:Static p:Resources.TbFarm}" Binding="{Binding Farm}" Width="65" CanUserSort="True"/>
+                
+                <DataGridTextColumn Header="{x:Static p:Resources.TbDate}" Binding="{Binding GameDate}" Width="*" CanUserSort="True"/>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</UserControl>

@@ -1,0 +1,138 @@
+﻿<UserControl
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:p="clr-namespace:LoL_Info.Properties"
+             xmlns:local="clr-namespace:LoL_Info.Windows"
+             xmlns:Wpf="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf" x:Class="LoL_Info.Windows.Charts"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300" Background="Transparent">
+
+    <Grid Background="Black">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="35"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="40"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="60"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+
+        <Border Grid.Row="0" Grid.ColumnSpan="2" BorderThickness="0,0,0,2" BorderBrush="{StaticResource ForeColor}">
+            <Label Name="chartNameLabel" Background="{StaticResource BackColor1}" Foreground="{StaticResource ForeColor}" HorizontalContentAlignment="Center" FontFamily="Times New Roman" FontSize="20"></Label>
+        </Border>
+
+        <Border Grid.Row="2" Grid.ColumnSpan="2" BorderThickness="0,2,0,0" BorderBrush="{StaticResource ForeColor}">
+            <DockPanel>
+                <Label Name="lbWinRate" DockPanel.Dock="Left" Margin="4" Foreground="{StaticResource ForeColor}" FontFamily="Times New Roman" FontSize="20"></Label>
+                
+                <Label Name="lbMatchesCount" DockPanel.Dock="Left" Margin="0,4,0,4" Foreground="{StaticResource ForeColor}" FontFamily="Times New Roman" FontSize="20"></Label>
+
+                <Button Name="btnFarm" Style="{StaticResource B1}" Content="{x:Static p:Resources.TextFarm}" DockPanel.Dock="Right" HorizontalAlignment="Right" Margin="0,5,5,5" Width="100" Click="btnFarm_Click">
+                    <Button.ToolTip>
+                        <ToolTip Style="{StaticResource TT1}" Content="{x:Static p:Resources.ChartFarmTip}"></ToolTip>
+                    </Button.ToolTip>
+                </Button>
+
+                <Button Name="btnKDA" Style="{StaticResource B1}" Content="{x:Static p:Resources.TextKDA}" DockPanel.Dock="Right" HorizontalAlignment="Right" Margin="5" Width="100" Click="btnKDA_Click">
+                    <Button.ToolTip>
+                        <ToolTip Style="{StaticResource TT1}" Content="{x:Static p:Resources.ChartKDATip}"></ToolTip>
+                    </Button.ToolTip>
+                </Button>
+            </DockPanel>
+        </Border>
+
+        <Grid Grid.Column="0" Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="60"/>
+                <RowDefinition Height="55"/>
+                <RowDefinition Height="55"/>
+                <RowDefinition Height="55"/>
+                <RowDefinition Height="55"/>
+                <RowDefinition Height="55"/>
+                <RowDefinition Height="1*"/>
+            </Grid.RowDefinitions>
+
+            <Border Name="btnTank" Grid.Row="0" Margin="5" BorderThickness="2.5" CornerRadius="5" BorderBrush="{StaticResource ForeColor}" MouseDown="btnTank_MouseDown" MouseEnter="btnChart_MouseEnter" MouseLeave="btnChart_MouseLeave">
+                <Image Stretch="Fill" Source="/LoL_Info;component/Resources/Tank.png"></Image>
+            
+                <Border.ToolTip>
+                    <ToolTip Style="{StaticResource TT1}" Content="{x:Static p:Resources.RlTank}"></ToolTip>
+                </Border.ToolTip>
+            </Border>
+
+            <Border Name="btnFighter" Grid.Row="1" Margin="5,0,5,5" BorderThickness="2.5" CornerRadius="5" BorderBrush="{StaticResource ForeColor}" MouseDown="btnFighter_MouseDown" MouseEnter="btnChart_MouseEnter" MouseLeave="btnChart_MouseLeave">
+                <Image Stretch="Fill" Source="/LoL_Info;component/Resources/Fighter.png"></Image>
+            
+                <Border.ToolTip>
+                    <ToolTip Style="{StaticResource TT1}" Content="{x:Static p:Resources.RlFighter}"></ToolTip>
+                </Border.ToolTip>
+            </Border>
+
+            <Border Name="btnMage" Grid.Row="2" Margin="5,0,5,5" BorderThickness="2.5" CornerRadius="5" BorderBrush="{StaticResource ForeColor}" MouseDown="btnMage_MouseDown" MouseEnter="btnChart_MouseEnter" MouseLeave="btnChart_MouseLeave">
+                <Image Stretch="Fill" Source="/LoL_Info;component/Resources/Mage.png"></Image>
+            
+                <Border.ToolTip>
+                    <ToolTip Style="{StaticResource TT1}" Content="{x:Static p:Resources.RlMage}"></ToolTip>
+                </Border.ToolTip>
+            </Border>
+
+            <Border Name="btnMarksman" Grid.Row="3" Margin="5,0,5,5" BorderThickness="2.5" CornerRadius="5" BorderBrush="{StaticResource ForeColor}" MouseDown="btnMarksman_MouseDown" MouseEnter="btnChart_MouseEnter" MouseLeave="btnChart_MouseLeave">
+                <Image Stretch="Fill" Source="/LoL_Info;component/Resources/Marksman.png"></Image>
+            
+                <Border.ToolTip>
+                    <ToolTip Style="{StaticResource TT1}" Content="{x:Static p:Resources.RlMarksman}"></ToolTip>
+                </Border.ToolTip>
+            </Border>
+
+            <Border Name="btnSupport" Grid.Row="4" Margin="5,0,5,5" BorderThickness="2.5" CornerRadius="5" BorderBrush="{StaticResource ForeColor}" MouseDown="btnSupport_MouseDown" MouseEnter="btnChart_MouseEnter" MouseLeave="btnChart_MouseLeave">
+                <Image Stretch="Fill" Source="/LoL_Info;component/Resources/Support.png"></Image>
+            
+                <Border.ToolTip>
+                    <ToolTip Style="{StaticResource TT1}" Content="{x:Static p:Resources.RlSupport}"></ToolTip>
+                </Border.ToolTip>
+            </Border>
+
+            <Border Name="btnAssassin" Grid.Row="5" Margin="5,0,5,5" VerticalAlignment="Top" BorderThickness="2.5" CornerRadius="5" BorderBrush="{StaticResource ForeColor}" MouseDown="btnAssassin_MouseDown" MouseEnter="btnChart_MouseEnter" MouseLeave="btnChart_MouseLeave">
+                <Image Stretch="Fill" Source="/LoL_Info;component/Resources/Assassin.png"></Image>
+            
+                <Border.ToolTip>
+                    <ToolTip Style="{StaticResource TT1}" Content="{x:Static p:Resources.RlAssassin}"></ToolTip>
+                </Border.ToolTip>
+            </Border>
+        </Grid>
+
+        <Border Grid.Column="1" Grid.Row="1" Width="Auto" Padding="5" BorderThickness="2,0,0,0" BorderBrush="{StaticResource ForeColor}">
+            <Wpf:CartesianChart Name="chart" MinHeight="100" MinWidth="100" Background="{StaticResource BackColor2}" Foreground="{StaticResource ForeColor}" Zoom="None" LegendLocation="Top" FontFamily="Times New Roman" FontSize="14">
+                <Wpf:CartesianChart.Series>
+                    <Wpf:LineSeries Title="{x:Static p:Resources.TextKDA}" Name="seria1" StrokeThickness="2" Stroke="{StaticResource ForeColor}" Fill="#21C9AA71" PointGeometrySize="6" PointForeground="{StaticResource ForeColor}"/>
+                    
+                    <Wpf:LineSeries Title="{x:Static p:Resources.AverageVal}" Name="seria2" StrokeThickness="3" StrokeDashArray="5" Stroke="#FFBFF168" Fill="Transparent" LineSmoothness="0" PointGeometry="{x:Null}"/>
+                    
+                    <Wpf:LineSeries Title="{x:Static p:Resources.TrendLine}" Name="seria3" StrokeThickness="3" StrokeDashArray="5" Stroke="#FFF45D51" Fill="Transparent" LineSmoothness="0" PointGeometry="{x:Null}"/>
+                </Wpf:CartesianChart.Series>
+
+                <Wpf:CartesianChart.DataTooltip>
+                    <Wpf:DefaultTooltip Background="{StaticResource BackColor1}" Opacity="0.8"></Wpf:DefaultTooltip>
+                </Wpf:CartesianChart.DataTooltip>
+
+                <Wpf:CartesianChart.ToolTip>
+                    <ToolTip Style="{StaticResource TT1}" Content="{x:Static p:Resources.ChartTip}"></ToolTip>
+                </Wpf:CartesianChart.ToolTip>
+                
+                <Wpf:CartesianChart.ContextMenu>
+                    <ContextMenu Background="{StaticResource ForeColor}">
+                        <MenuItem Name="partAll" Style="{StaticResource MI1}" Header="{x:Static p:Resources.AllMatches}" Click="partAll_Click"></MenuItem>
+
+                        <MenuItem Name="partRanked" Style="{StaticResource MI1}" Header="{x:Static p:Resources.RankedMatches}" Click="partRanked_Click"></MenuItem>
+
+                        <MenuItem Name="partSimple" Style="{StaticResource MI1}" Header="{x:Static p:Resources.SimpleMatches}" Click="partSimple_Click"></MenuItem>
+                    </ContextMenu>
+                </Wpf:CartesianChart.ContextMenu>
+            </Wpf:CartesianChart>
+        </Border>
+    </Grid>
+</UserControl>

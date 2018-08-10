@@ -1,0 +1,53 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:LoL_Info.Styles">
+  
+    <Style TargetType="Label" x:Key="TippedLb">
+        <Setter Property="Foreground" Value="{StaticResource ForeColor}"></Setter>
+        <Setter Property="FontFamily" Value="Times New Roman"></Setter>
+
+        <Style.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="Foreground" Value="{StaticResource ForeColor2}"></Setter>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style TargetType="ToolTip" x:Key="TT1">
+        <Setter Property="Background" Value="{StaticResource BackColor2}"></Setter>
+        <Setter Property="Foreground" Value="{StaticResource ForeColor}"></Setter>
+        <Setter Property="Padding" Value="3"></Setter>
+        <Setter Property="Opacity" Value="0.9"></Setter>
+        <Setter Property="HorizontalContentAlignment" Value="Center"></Setter>
+        <Setter Property="BorderThickness" Value="2"></Setter>
+        <Setter Property="BorderBrush" Value="{StaticResource ForeColor}"></Setter>
+        <Setter Property="FontFamily" Value="Times New Roman"></Setter>
+        <Setter Property="FontSize" Value="16"></Setter>
+    </Style>
+
+    <Style TargetType="MenuItem" x:Key="MI1">
+        <Setter Property="OverridesDefaultStyle" Value="True"></Setter>
+
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="MenuItem">
+                    <Grid Background="{StaticResource BackColor1}">
+                        <Border x:Name="border" Background="{StaticResource BackColor1}" Padding="5" BorderThickness="2" BorderBrush="{StaticResource BackColor1}">
+                            <ContentPresenter ContentSource="Header"></ContentPresenter>
+                        </Border>
+                    </Grid>
+
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="true">
+                            <Setter TargetName="border" Property="Background" Value="{StaticResource OverControl}"></Setter>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+
+        <Setter Property="Foreground" Value="{StaticResource ForeColor}"></Setter>
+        <Setter Property="FontFamily" Value="Times New Roman"></Setter>
+        <Setter Property="FontSize" Value="14"></Setter>
+    </Style>
+</ResourceDictionary>

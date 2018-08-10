@@ -1,0 +1,63 @@
+﻿<Window x:Class="LoL_Info.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:p="clr-namespace:LoL_Info.Properties"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LoL_Info"
+        mc:Ignorable="d" 
+        MinHeight="550" MinWidth="700" Height="550" Width="700" WindowStyle="None" ResizeMode="CanResizeWithGrip" AllowsTransparency="True" 
+        WindowStartupLocation="CenterScreen" Background="{StaticResource BackColor1}" LocationChanged="Window_LocationChanged" StateChanged="Window_StateChanged">
+
+    <Border Background="{StaticResource BackColor2}" BorderThickness="7" BorderBrush="{StaticResource BackColor1}">
+        <Grid>
+            <DockPanel>
+                <DockPanel Name="titleBar" DockPanel.Dock="Top" Height="30"></DockPanel>
+
+                <Border DockPanel.Dock="Bottom" BorderThickness="2" CornerRadius="5" BorderBrush="{StaticResource ForeColor}">
+                    <DockPanel>
+                        <DockPanel Name="headerPanel" DockPanel.Dock="Top" Height="50">
+                            <DockPanel.Background>
+                                <ImageBrush Stretch="Uniform" ImageSource="pack://application:,,,/Resources/Logo2.png"/>
+                            </DockPanel.Background>
+
+                            <Button Name="btnEnter" Style="{StaticResource  B1}" Content="{x:Static p:Resources.LogIn}" DockPanel.Dock="Right" 
+                                    VerticalAlignment="Center" HorizontalContentAlignment="Center" Margin="0,0,7.5,0" Height="35" Width="80" Click="btnEnter_Click">
+                                <Button.ToolTip>
+                                    <ToolTip Name="logTip" Style="{StaticResource TT1}" Content="{x:Static p:Resources.LoadBtnTip}"></ToolTip>
+                                </Button.ToolTip>
+                            </Button>
+
+                            <Border DockPanel.Dock="Right" Margin="0,0,7.5,0" Height="35" Width="120" Background="{StaticResource BackColor}" BorderThickness="2" 
+                                    CornerRadius="5" BorderBrush="{StaticResource ForeColor}">
+                                <TextBox Name="txtName"  VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Background="{x:Null}" Foreground="{StaticResource ForeColor}" 
+                                         BorderThickness="0" SelectionBrush="{StaticResource OverControl}" CaretBrush="{StaticResource ForeColor}" FontFamily="Times New Roman" FontSize="22">
+                                    <TextBox.ToolTip>
+                                        <ToolTip Name="nameTip" Style="{StaticResource TT1}" Content="{x:Static p:Resources.SummonerLogTip}"></ToolTip>
+                                    </TextBox.ToolTip>
+                                </TextBox>
+                            </Border>
+
+                            <Button Name="btnTable" Style="{StaticResource B1}" HorizontalAlignment="Left" Margin="7.5,0,7.5,0" Height="35" Width="35" Click="btnTable_Click">
+                                <Path Data="M1 1 H4 V4 H1 M1 6 H4 V9 H1 M6 1 H9 V4 H6 M6 6 H9 V9 H6" Height="20" Width="20" Stretch="Fill" Fill="{StaticResource ForeColor}" Stroke="{StaticResource ForeColor}"></Path>
+                                <Button.ToolTip>
+                                    <ToolTip Name="tableTip" Style="{StaticResource TT1}" Content="{x:Static p:Resources.MenuBtnTip}"></ToolTip>
+                                </Button.ToolTip>
+                            </Button>
+                        </DockPanel>
+
+                        <DockPanel DockPanel.Dock="Top" Height="2" Background="{StaticResource ForeColor}"/>
+
+                        <Grid DockPanel.Dock="Bottom" Height="24" Background="{StaticResource ForeColor}">
+                            <ProgressBar Name="progressBar" Margin="1,2,1,2" Value="0" Background="Transparent" Foreground="{StaticResource ProgressColor}" BorderThickness="0" ValueChanged="progressBar_ValueChanged"/>
+
+                            <Label Name="statusText" Content="{x:Static p:Resources.SbReady}" Margin="3,0,0,0" Foreground="{StaticResource BackColor}" FontSize="11" FontWeight="SemiBold"/>
+                        </Grid>
+
+                        <DockPanel Name="infoPanel" DockPanel.Dock="Bottom" Background="{StaticResource BackColor}"/>
+                    </DockPanel>
+                </Border>
+            </DockPanel>
+        </Grid>
+    </Border>
+</Window>
